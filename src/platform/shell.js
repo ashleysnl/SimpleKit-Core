@@ -185,10 +185,12 @@ function renderRelatedTools(config) {
   const mount = document.querySelector("[data-simplekit-related-tools]");
   if (!mount || config.showRelatedTools === false) return;
   const fallbackIds = getToolById(config.toolId)?.relatedToolIds || [];
-  const relatedIds = Array.isArray(config.relatedToolIds) && config.relatedToolIds.length
+  const configuredRelatedIds = Array.isArray(config.relatedToolIds) && config.relatedToolIds.length
     ? config.relatedToolIds
-    : fallbackIds;
-  mount.innerHTML = buildRelatedToolsHtml(getToolsByIds(relatedIds.filter((id) => id !== "tools")));
+    : Array.isArray(config.relatedTools) && config.relatedTools.length
+      ? config.relatedTools
+      : fallbackIds;
+  mount.innerHTML = buildRelatedToolsHtml(getToolsByIds(configuredRelatedIds.filter((id) => id !== "tools")));
 }
 
 export function initSimpleKitShell(config = {}) {

@@ -9,6 +9,8 @@ Treat only these files as supported shared infrastructure:
 - [simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.css)
 - [simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.js)
 - [simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-tools.js)
+- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
+- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 - [dist/simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-core.css)
 - [dist/simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-core.js)
 - [dist/simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-tools.js)
@@ -33,6 +35,8 @@ Use these files from other SimpleKit repos:
 - [simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.css)
 - [simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.js)
 - [simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-tools.js)
+- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
+- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 
 Versioned-style aliases also exist under [dist/](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist).
 
@@ -47,7 +51,7 @@ Consuming pages set `window.SimpleKitPage` before loading `simplekit-core.js`.
     pageType: "tool",
     activeNavHref: "./tools.html",
     toolId: "cpp-calculator",
-    relatedToolIds: ["retirement-planner", "rrsp-tfsa-calculator", "fire-calculator"],
+    relatedTools: ["retirement", "rrsp-tfsa", "fire"],
     showSupportCta: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
@@ -76,6 +80,7 @@ Each tool entry includes:
 - `name`
 - `slug`
 - `href`
+- `aliases`
 - `category`
 - `timeToUse`
 - `status`

@@ -1,6 +1,7 @@
 export const SIMPLEKIT_TOOLS = [
   {
     id: "retirement-planner",
+    aliases: ["retirement"],
     name: "Retirement Planner",
     slug: "retirement-planner.html",
     href: "./retirement-planner.html",
@@ -16,6 +17,7 @@ export const SIMPLEKIT_TOOLS = [
   },
   {
     id: "net-worth-calculator",
+    aliases: ["networth"],
     name: "Net Worth Calculator",
     slug: "net-worth-calculator.html",
     href: "./net-worth-calculator.html",
@@ -31,6 +33,7 @@ export const SIMPLEKIT_TOOLS = [
   },
   {
     id: "fire-calculator",
+    aliases: ["fire"],
     name: "FIRE Calculator",
     slug: "fire-calculator.html",
     href: "./fire-calculator.html",
@@ -46,6 +49,7 @@ export const SIMPLEKIT_TOOLS = [
   },
   {
     id: "cpp-calculator",
+    aliases: ["cpp"],
     name: "CPP Calculator",
     slug: "cpp-calculator.html",
     href: "./cpp-calculator.html",
@@ -61,6 +65,7 @@ export const SIMPLEKIT_TOOLS = [
   },
   {
     id: "rrsp-tfsa-calculator",
+    aliases: ["rrsp-tfsa"],
     name: "RRSP / TFSA Calculator",
     slug: "rrsp-tfsa-calculator.html",
     href: "./rrsp-tfsa-calculator.html",
@@ -75,7 +80,24 @@ export const SIMPLEKIT_TOOLS = [
     relatedToolIds: ["retirement-planner", "cpp-calculator", "fire-calculator"],
   },
   {
+    id: "mortgage",
+    aliases: ["mortgage-calculator"],
+    name: "Mortgage Calculator",
+    slug: "mortgage",
+    href: "https://mortgage.simplekit.app/",
+    category: "Home Planning",
+    timeToUse: "3 min",
+    status: "live",
+    featured: false,
+    description: "Estimate mortgage payments, compare affordability scenarios, and understand how housing costs fit into your wider plan.",
+    ctaLabel: "Estimate Mortgage",
+    learnSlug: "",
+    learnHref: "",
+    relatedToolIds: ["networth", "fire", "retirement", "rrsp-tfsa"],
+  },
+  {
     id: "travel-planner",
+    aliases: ["travel"],
     name: "Travel Planner",
     slug: "travel-planner.html",
     href: "./travel-planner.html",
@@ -91,12 +113,30 @@ export const SIMPLEKIT_TOOLS = [
   },
 ];
 
+function normalizeToolId(toolId) {
+  const value = String(toolId || "").trim();
+  if (!value) return "";
+  return value.toLowerCase();
+}
+
 export function getToolById(toolId) {
-  return SIMPLEKIT_TOOLS.find((tool) => tool.id === toolId) || null;
+  const normalizedToolId = normalizeToolId(toolId);
+  return SIMPLEKIT_TOOLS.find((tool) => {
+    const aliases = Array.isArray(tool.aliases) ? tool.aliases : [];
+    return normalizeToolId(tool.id) === normalizedToolId
+      || aliases.some((alias) => normalizeToolId(alias) === normalizedToolId);
+  }) || null;
 }
 
 export function getToolsByIds(ids = []) {
-  return ids.map((id) => getToolById(id)).filter(Boolean);
+  const seen = new Set();
+  return ids
+    .map((id) => getToolById(id))
+    .filter((tool) => {
+      if (!tool || seen.has(tool.id)) return false;
+      seen.add(tool.id);
+      return true;
+    });
 }
 
 export function getFeaturedTool() {

@@ -19,6 +19,8 @@ Tool-specific business logic must stay in each tool repo.
 - `/simplekit-core.css`
 - `/simplekit-core.js`
 - `/simplekit-tools.js`
+- `/core.css`
+- `/core.js`
 - `/dist/simplekit-core.css`
 - `/dist/simplekit-core.js`
 - `/dist/simplekit-tools.js`
@@ -32,8 +34,8 @@ Set `window.SimpleKitPage` before loading `simplekit-core.js`.
   window.SimpleKitPage = {
     pageType: "tool",
     activeNavHref: "./tools.html",
-    toolId: "cpp-calculator",
-    relatedToolIds: ["retirement-planner", "rrsp-tfsa-calculator", "fire-calculator"],
+    toolId: "cpp",
+    relatedTools: ["retirement", "rrsp-tfsa", "fire"],
     showSupportCta: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
@@ -49,6 +51,7 @@ Supported config fields today:
 - `activeNavHref`
 - `toolId`
 - `featuredToolId`
+- `relatedTools`
 - `relatedToolIds`
 - `showSupportCta`
 - `showRelatedTools`
@@ -88,6 +91,7 @@ Update `/src/platform/tools.js` with:
 - `name`
 - `slug`
 - `href`
+- `aliases`
 - `category`
 - `timeToUse`
 - `status`
