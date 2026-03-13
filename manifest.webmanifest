@@ -1,0 +1,24 @@
+{
+  "name": "SimpleKit",
+  "short_name": "SimpleKit",
+  "description": "Simple tools for retirement, savings, net worth, FIRE, CPP timing, and travel planning.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
