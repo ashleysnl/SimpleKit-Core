@@ -1,1 +1,1 @@
-export * from "../simplekit-tools.js";
+export * from "../core.js";

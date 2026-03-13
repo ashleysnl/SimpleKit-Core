@@ -1,1 +1,368 @@
-@import "./simplekit-core.css";
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --ink: #162033;
+  --muted: #6b7280;
+  --line: #e8edf5;
+  --brand: #0f6abf;
+  --brand-2: #0ea5a8;
+  --accent: #ff8c42;
+  --danger: #d9485f;
+  --success: #16a34a;
+  --shadow: 0 18px 40px rgba(16, 33, 58, 0.08);
+  --radius: 18px;
+  --focus: 2px solid #0f6abf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+}
+
+body {
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(14, 165, 168, 0.15), transparent 40%),
+    radial-gradient(circle at 100% 10%, rgba(15, 106, 191, 0.14), transparent 42%),
+    linear-gradient(180deg, #eef4ff 0%, #f7fbff 35%, #f7f7fb 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: #0b4f8f;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: var(--focus);
+  outline-offset: 2px;
+}
+
+.page-shell {
+  width: min(1200px, 94vw);
+  margin: 24px auto 40px;
+}
+
+.hero {
+  display: block;
+  background: linear-gradient(135deg, #0a3565, var(--brand) 55%, var(--brand-2));
+  color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.site-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.site-brand {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Iowan Old Style", "Baskerville", "Georgia", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-nav a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.site-nav a[aria-current="page"] {
+  background: #fff;
+  color: #12406a;
+}
+
+.hero h1 {
+  margin: 6px 0;
+  font-family: "Iowan Old Style", "Baskerville", "Georgia", serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero-subtitle,
+.hero-proof,
+.section-lead,
+.muted {
+  color: var(--muted);
+}
+
+.hero-subtitle,
+.hero-proof {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-actions,
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.page-breadcrumb {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.82rem;
+}
+
+.page-breadcrumb a {
+  color: inherit;
+}
+
+.page-hero-meta,
+.tool-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.page-hero-meta span,
+.tool-meta-row span,
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.page-hero-meta span {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.card-tag,
+.tool-meta-row span {
+  background: #eef5ff;
+  border: 1px solid #d7e7fb;
+  color: #0b4f8f;
+}
+
+.btn,
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 9px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover,
+.icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(15, 106, 191, 0.22);
+}
+
+.btn-secondary,
+.icon-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.panel .btn-secondary {
+  background: #f3f6fb;
+  color: var(--ink);
+  border-color: #d9e2ef;
+}
+
+.panel {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 20px;
+}
+
+.platform-section,
+.page-section-grid,
+.section-intro,
+.tool-grid,
+.related-grid,
+.article-grid,
+.steps-grid,
+.trust-grid,
+.footer-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.page-section-grid {
+  gap: 14px;
+}
+
+.tool-grid,
+.related-grid,
+.article-grid,
+.trust-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.steps-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tool-card,
+.related-card,
+.article-card,
+.trust-card,
+.step-card {
+  display: block;
+  border: 1px solid #dce7f7;
+  border-radius: 16px;
+  background: #fff;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.featured-tool-card,
+.support-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.featured-tool-card {
+  padding: 20px;
+  border: 1px solid rgba(15, 106, 191, 0.24);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(15, 106, 191, 0.08), rgba(14, 165, 168, 0.1));
+}
+
+.support-banner {
+  border: 1px solid rgba(255, 140, 66, 0.24);
+  background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(14, 165, 168, 0.08));
+}
+
+.small-copy {
+  font-size: 0.82rem;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.app-footer {
+  margin-top: 14px;
+  display: grid;
+  gap: 16px;
+  font-size: 0.82rem;
+}
+
+.footer-grid {
+  grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+}
+
+.footer-link-list {
+  display: grid;
+  gap: 6px;
+}
+
+.link-list {
+  display: grid;
+  gap: 8px;
+}
+
+.link-list a {
+  color: #0b4f8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link-list a {
+  color: #0b4f8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .site-topbar {
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+  }
+
+  .tool-grid,
+  .related-grid,
+  .article-grid,
+  .trust-grid,
+  .steps-grid,
+  .two-col-grid,
+  .footer-grid,
+  .featured-tool-card,
+  .support-banner {
+    grid-template-columns: 1fr;
+  }
+}

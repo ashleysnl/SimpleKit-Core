@@ -3,4 +3,4 @@ export {
   getToolById,
   getToolsByIds,
   getFeaturedTool,
-} from "./src/platform/tools.js";
+} from "./core.js";
