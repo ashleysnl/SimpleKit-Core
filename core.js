@@ -114,7 +114,7 @@ const SIMPLEKIT_TOOLS = [
 ];
 
 const DEFAULT_NAV = [
-  { href: "./index.html", label: "Home" },
+  { href: "https://simplekit.app", label: "Home" },
   { href: "./tools.html", label: "Tools" },
   { href: "./learn.html", label: "Learn" },
   { href: "./about.html", label: "About" },
