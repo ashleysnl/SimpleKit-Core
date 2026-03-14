@@ -115,10 +115,10 @@ const SIMPLEKIT_TOOLS = [
 
 const DEFAULT_NAV = [
   { href: "https://simplekit.app", label: "Home" },
-  { href: "./tools.html", label: "Tools" },
-  { href: "./learn.html", label: "Learn" },
-  { href: "./about.html", label: "About" },
-  { href: "./support.html", label: "Support" },
+  { href: "https://simplekit.app/tools/", label: "Tools" },
+  { href: "https://simplekit.app/learn/", label: "Learn" },
+  { href: "https://simplekit.app/about/", label: "About" },
+  { href: "https://simplekit.app/support/", label: "Support" },
 ];
 
 function normalizeToolId(toolId) {
@@ -224,7 +224,7 @@ function renderHeader(config) {
   if (!mount) return;
   mount.innerHTML = `
     <div class="site-topbar">
-      <a class="site-brand" href="./index.html">SimpleKit</a>
+      <a class="site-brand" href="https://simplekit.app">SimpleKit</a>
       <nav class="site-nav" aria-label="Primary navigation">
         ${buildNavHtml(config.activeNavHref)}
       </nav>
