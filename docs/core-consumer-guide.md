@@ -27,7 +27,7 @@ Tool-specific business logic must stay in each tool repo.
 
 ## Page Config Pattern
 
-Set `window.SimpleKitPage` before loading `simplekit-core.js`.
+Set `window.SimpleKitPage` before loading `core.js`.
 
 ```html
 <script>
@@ -42,7 +42,7 @@ Set `window.SimpleKitPage` before loading `simplekit-core.js`.
     footerNote: "SimpleKit shell loaded from the shared core repo."
   };
 </script>
-<script type="module" src="./simplekit-core.js"></script>
+<script type="module" src="./core.js"></script>
 ```
 
 Supported config fields today:
@@ -108,8 +108,10 @@ If the tool lives in another repo or on another domain, `href` should point dire
 For a static multi-repo setup:
 
 1. Host this repo once as the canonical shared asset source, or vendor the public files into each consumer repo.
-2. Prefer `/dist/*` paths for consumers.
+2. Prefer `/core.css` and `/core.js` as the canonical public endpoints.
 3. Use absolute `href` values in the registry when cross-repo links should leave the current site.
+
+Legacy compatibility paths remain available under `/dist/*` and the older `simplekit-core.*` names.
 
 ## What Stays Out of Core
 

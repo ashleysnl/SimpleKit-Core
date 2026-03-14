@@ -6,11 +6,11 @@ Shared platform layer for the SimpleKit ecosystem.
 
 Treat only these files as supported shared infrastructure:
 
+- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
+- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 - [simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.css)
 - [simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.js)
 - [simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-tools.js)
-- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
-- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 - [dist/simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-core.css)
 - [dist/simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-core.js)
 - [dist/simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist/simplekit-tools.js)
@@ -32,20 +32,20 @@ This repo is intended to provide reusable static-site infrastructure for:
 
 Use these files from other SimpleKit repos:
 
+- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
+- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 - [simplekit-core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.css)
 - [simplekit-core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-core.js)
 - [simplekit-tools.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/simplekit-tools.js)
-- [core.css](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.css)
-- [core.js](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/core.js)
 
-Versioned-style aliases also exist under [dist/](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist).
+Canonical public endpoints are `core.css` and `core.js`. Compatibility aliases also exist under [dist/](/Users/AshleySkinner/Documents/00_Engineering/04_Code/39_SimpleKit%20Core/dist) and the older `simplekit-core.*` files.
 
 ## Page Config Pattern
 
 Consuming pages set `window.SimpleKitPage` before loading `simplekit-core.js`.
 
 ```html
-<link rel="stylesheet" href="./simplekit-core.css" />
+<link rel="stylesheet" href="./core.css" />
 <script>
   window.SimpleKitPage = {
     pageType: "tool",
@@ -58,7 +58,7 @@ Consuming pages set `window.SimpleKitPage` before loading `simplekit-core.js`.
     footerNote: "Shared platform shell loaded from SimpleKit core."
   };
 </script>
-<script type="module" src="./simplekit-core.js"></script>
+<script type="module" src="./core.js"></script>
 ```
 
 Required shell mount points:
