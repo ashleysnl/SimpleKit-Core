@@ -37,6 +37,7 @@ Set `window.SimpleKitPage` before loading `core.js`.
     toolId: "cpp",
     relatedTools: ["retirement", "rrsp-tfsa", "fire"],
     showSupportCta: true,
+    showFloatingSupportButton: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
     footerNote: "SimpleKit shell loaded from the shared core repo."
@@ -54,6 +55,7 @@ Supported config fields today:
 - `relatedTools`
 - `relatedToolIds`
 - `showSupportCta`
+- `showFloatingSupportButton`
 - `showRelatedTools`
 - `showFooter`
 - `showFooterToolLinks`

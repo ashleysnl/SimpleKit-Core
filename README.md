@@ -53,6 +53,7 @@ Consuming pages set `window.SimpleKitPage` before loading `simplekit-core.js`.
     toolId: "cpp-calculator",
     relatedTools: ["retirement", "rrsp-tfsa", "fire"],
     showSupportCta: true,
+    showFloatingSupportButton: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
     footerNote: "Shared platform shell loaded from SimpleKit core."

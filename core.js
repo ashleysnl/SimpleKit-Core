@@ -296,6 +296,20 @@ function renderSupport(config) {
   `;
 }
 
+function renderFloatingSupportButton(config) {
+  if (config.showFloatingSupportButton === false) return;
+  if (document.getElementById("simplekitFloatingSupport")) return;
+  const floatingSupport = document.createElement("a");
+  floatingSupport.id = "simplekitFloatingSupport";
+  floatingSupport.className = "floating-support-btn";
+  floatingSupport.href = "https://buymeacoffee.com/ashleysnl";
+  floatingSupport.target = "_blank";
+  floatingSupport.rel = "noopener noreferrer";
+  floatingSupport.setAttribute("aria-label", "Buy Me a Coffee");
+  floatingSupport.textContent = "☕ Buy Me a Coffee";
+  document.body.appendChild(floatingSupport);
+}
+
 function renderRelatedTools(config) {
   const mount = document.querySelector("[data-simplekit-related-tools]");
   if (!mount || config.showRelatedTools === false) return;
@@ -339,6 +353,7 @@ function initSimpleKitShell(config = {}) {
   renderToolDirectory(config);
   renderFooter(config);
   renderSupport(config);
+  renderFloatingSupportButton(config);
   renderRelatedTools(config);
 }
 
