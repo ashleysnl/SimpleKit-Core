@@ -190,8 +190,8 @@ function renderFloatingSupportButton(config) {
   floatingSupport.href = "https://buymeacoffee.com/ashleysnl";
   floatingSupport.target = "_blank";
   floatingSupport.rel = "noopener noreferrer";
-  floatingSupport.setAttribute("aria-label", "Buy Me a Coffee");
-  floatingSupport.textContent = "☕ Buy Me a Coffee";
+  floatingSupport.setAttribute("aria-label", "Support this free tool");
+  floatingSupport.textContent = "☕ Support this free tool";
   document.body.appendChild(floatingSupport);
 }
 
