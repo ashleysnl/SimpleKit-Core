@@ -138,10 +138,10 @@ function renderFooter(config) {
           <strong>Learn</strong>
           ${showFooterLearnLinks ? `
             <div class="footer-link-list">
-              <a href="./learn.html">Guides Hub</a>
-              <a href="./retirement-planning-basics.html">Retirement Planning Basics</a>
-              <a href="./cpp-basics.html">CPP Basics</a>
-              <a href="./rrsp-vs-tfsa-basics.html">RRSP vs TFSA Basics</a>
+              <a href="https://simplekit.app/learn/">Guides Hub</a>
+              <a href="https://simplekit.app/learn/retirement-planning-basics/">Retirement Planning Basics</a>
+              <a href="https://simplekit.app/learn/cpp-basics/">CPP Basics</a>
+              <a href="https://simplekit.app/learn/rrsp-vs-tfsa-basics/">RRSP vs TFSA Basics</a>
             </div>
           ` : ""}
         </div>
@@ -149,7 +149,7 @@ function renderFooter(config) {
           <strong>Support</strong>
           ${showFooterSupportLinks ? `
             <div class="footer-link-list">
-              <a href="./support.html">Support SimpleKit</a>
+              <a href="https://simplekit.app/support/">Support SimpleKit</a>
               <a href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
             </div>
           ` : ""}
@@ -175,7 +175,7 @@ function renderSupport(config) {
       </div>
       <div class="landing-actions">
         <a class="btn btn-primary" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">${escapeHtml(config.supportPrimaryLabel || "Support future tools")}</a>
-        <a class="btn btn-secondary" href="./support.html">${escapeHtml(config.supportSecondaryLabel || "See support options")}</a>
+        <a class="btn btn-secondary" href="https://simplekit.app/support/">${escapeHtml(config.supportSecondaryLabel || "See support options")}</a>
       </div>
     </section>
   `;

@@ -4,7 +4,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["retirement"],
     name: "Retirement Planner",
     slug: "retirement-planner.html",
-    href: "./retirement-planner.html",
+    href: "https://retirement.simplekit.app/",
     category: "Financial Planning",
     timeToUse: "5 min",
     status: "live",
@@ -12,7 +12,7 @@ const SIMPLEKIT_TOOLS = [
     description: "Build a clearer picture of retirement income, savings, taxes, CPP, OAS, and future cash flow.",
     ctaLabel: "Open Planner",
     learnSlug: "retirement-planning-basics.html",
-    learnHref: "./retirement-planning-basics.html",
+    learnHref: "https://simplekit.app/learn/retirement-planning-basics/",
     relatedToolIds: ["cpp-calculator", "fire-calculator", "rrsp-tfsa-calculator"],
   },
   {
@@ -20,7 +20,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["networth"],
     name: "Net Worth Calculator",
     slug: "net-worth-calculator.html",
-    href: "./net-worth-calculator.html",
+    href: "https://networth.simplekit.app/",
     category: "Financial Planning",
     timeToUse: "2 min",
     status: "planned",
@@ -28,7 +28,7 @@ const SIMPLEKIT_TOOLS = [
     description: "See where you stand today by adding up assets, debts, and home equity in one simple snapshot.",
     ctaLabel: "View Your Net Worth",
     learnSlug: "understanding-net-worth.html",
-    learnHref: "./understanding-net-worth.html",
+    learnHref: "https://simplekit.app/learn/net-worth-basics/",
     relatedToolIds: ["fire-calculator", "retirement-planner", "travel-planner"],
   },
   {
@@ -36,7 +36,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["fire"],
     name: "FIRE Calculator",
     slug: "fire-calculator.html",
-    href: "./fire-calculator.html",
+    href: "https://fire.simplekit.app/",
     category: "Financial Planning",
     timeToUse: "3 min",
     status: "planned",
@@ -44,7 +44,7 @@ const SIMPLEKIT_TOOLS = [
     description: "Estimate how much you may need to retire early and how savings pace affects the timeline.",
     ctaLabel: "Explore FIRE",
     learnSlug: "fire-explained.html",
-    learnHref: "./fire-explained.html",
+    learnHref: "https://simplekit.app/learn/fire-explained/",
     relatedToolIds: ["net-worth-calculator", "retirement-planner", "rrsp-tfsa-calculator"],
   },
   {
@@ -52,7 +52,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["cpp"],
     name: "CPP Calculator",
     slug: "cpp-calculator.html",
-    href: "./cpp-calculator.html",
+    href: "https://cpp.simplekit.app/",
     category: "Financial Planning",
     timeToUse: "2 min",
     status: "live",
@@ -60,7 +60,7 @@ const SIMPLEKIT_TOOLS = [
     description: "Explore CPP timing and compare how starting earlier or later affects future income decisions.",
     ctaLabel: "Estimate CPP",
     learnSlug: "cpp-basics.html",
-    learnHref: "./cpp-basics.html",
+    learnHref: "https://simplekit.app/learn/cpp-basics/",
     relatedToolIds: ["retirement-planner", "fire-calculator", "rrsp-tfsa-calculator"],
   },
   {
@@ -68,7 +68,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["rrsp-tfsa"],
     name: "RRSP / TFSA Calculator",
     slug: "rrsp-tfsa-calculator.html",
-    href: "./rrsp-tfsa-calculator.html",
+    href: "https://rrsptfsa.simplekit.app/",
     category: "Financial Planning",
     timeToUse: "3 min",
     status: "planned",
@@ -76,7 +76,7 @@ const SIMPLEKIT_TOOLS = [
     description: "Compare account strategies and see how tax treatment can change the long-term outcome.",
     ctaLabel: "Compare Accounts",
     learnSlug: "rrsp-vs-tfsa-basics.html",
-    learnHref: "./rrsp-vs-tfsa-basics.html",
+    learnHref: "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
     relatedToolIds: ["retirement-planner", "cpp-calculator", "fire-calculator"],
   },
   {
@@ -84,7 +84,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["mortgage-calculator"],
     name: "Mortgage Calculator",
     slug: "mortgage",
-    href: "https://mortgage.simplekit.app/",
+    href: "https://mortgagecalculator.simplekit.app/",
     category: "Home Planning",
     timeToUse: "3 min",
     status: "live",
@@ -100,7 +100,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["travel"],
     name: "Travel Planner",
     slug: "travel-planner.html",
-    href: "./travel-planner.html",
+    href: "https://travel.simplekit.app/",
     category: "Lifestyle Planning",
     timeToUse: "2 min",
     status: "planned",
@@ -108,7 +108,7 @@ const SIMPLEKIT_TOOLS = [
     description: "Organize trip costs, compare scenarios, and make travel budgeting easier before you book.",
     ctaLabel: "Plan a Trip",
     learnSlug: "travel-budget-planning-basics.html",
-    learnHref: "./travel-budget-planning-basics.html",
+    learnHref: "https://simplekit.app/learn/travel-budget-planning-basics/",
     relatedToolIds: ["tools", "net-worth-calculator", "retirement-planner"],
   },
 ];
@@ -253,10 +253,10 @@ function renderFooter(config) {
           <strong>Learn</strong>
           ${showFooterLearnLinks ? `
             <div class="footer-link-list">
-              <a href="./learn.html">Guides Hub</a>
-              <a href="./retirement-planning-basics.html">Retirement Planning Basics</a>
-              <a href="./cpp-basics.html">CPP Basics</a>
-              <a href="./rrsp-vs-tfsa-basics.html">RRSP vs TFSA Basics</a>
+              <a href="https://simplekit.app/learn/">Guides Hub</a>
+              <a href="https://simplekit.app/learn/retirement-planning-basics/">Retirement Planning Basics</a>
+              <a href="https://simplekit.app/learn/cpp-basics/">CPP Basics</a>
+              <a href="https://simplekit.app/learn/rrsp-vs-tfsa-basics/">RRSP vs TFSA Basics</a>
             </div>
           ` : ""}
         </div>
@@ -264,7 +264,7 @@ function renderFooter(config) {
           <strong>Support</strong>
           ${showFooterSupportLinks ? `
             <div class="footer-link-list">
-              <a href="./support.html">Support SimpleKit</a>
+              <a href="https://simplekit.app/support/">Support SimpleKit</a>
               <a href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
             </div>
           ` : ""}
@@ -290,7 +290,7 @@ function renderSupport(config) {
       </div>
       <div class="landing-actions">
         <a class="btn btn-primary" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">${escapeHtml(config.supportPrimaryLabel || "Support future tools")}</a>
-        <a class="btn btn-secondary" href="./support.html">${escapeHtml(config.supportSecondaryLabel || "See support options")}</a>
+        <a class="btn btn-secondary" href="https://simplekit.app/support/">${escapeHtml(config.supportSecondaryLabel || "See support options")}</a>
       </div>
     </section>
   `;
