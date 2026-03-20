@@ -138,10 +138,12 @@ function renderFooter(config) {
           <strong>Learn</strong>
           ${showFooterLearnLinks ? `
             <div class="footer-link-list">
-              <a href="https://simplekit.app/learn/">Guides Hub</a>
+              <a href="https://simplekit.app/learn/">Learn Hub</a>
               <a href="https://simplekit.app/learn/retirement-planning-basics/">Retirement Planning Basics</a>
               <a href="https://simplekit.app/learn/cpp-basics/">CPP Basics</a>
+              <a href="https://simplekit.app/learn/fire-explained/">FIRE Explained</a>
               <a href="https://simplekit.app/learn/rrsp-vs-tfsa-basics/">RRSP vs TFSA Basics</a>
+              <a href="https://simplekit.app/learn/net-worth-basics/">Understanding Net Worth</a>
             </div>
           ` : ""}
         </div>

@@ -4,7 +4,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["retirement"],
     name: "Retirement Planner",
     slug: "retirement-planner.html",
-    href: "https://retirement.simplekit.app/",
+    href: "https://simplekit.app/retirement-planner/",
     category: "Financial Planning",
     timeToUse: "5 min",
     status: "live",
@@ -20,7 +20,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["networth"],
     name: "Net Worth Calculator",
     slug: "net-worth-calculator.html",
-    href: "https://networth.simplekit.app/",
+    href: "https://simplekit.app/net-worth-calculator/",
     category: "Financial Planning",
     timeToUse: "2 min",
     status: "planned",
@@ -36,7 +36,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["fire"],
     name: "FIRE Calculator",
     slug: "fire-calculator.html",
-    href: "https://fire.simplekit.app/",
+    href: "https://simplekit.app/fire-calculator/",
     category: "Financial Planning",
     timeToUse: "3 min",
     status: "planned",
@@ -52,7 +52,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["cpp"],
     name: "CPP Calculator",
     slug: "cpp-calculator.html",
-    href: "https://cpp.simplekit.app/",
+    href: "https://simplekit.app/cpp-calculator/",
     category: "Financial Planning",
     timeToUse: "2 min",
     status: "live",
@@ -68,7 +68,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["rrsp-tfsa"],
     name: "RRSP / TFSA Calculator",
     slug: "rrsp-tfsa-calculator.html",
-    href: "https://rrsptfsa.simplekit.app/",
+    href: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
     category: "Financial Planning",
     timeToUse: "3 min",
     status: "planned",
@@ -84,7 +84,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["mortgage-calculator"],
     name: "Mortgage Calculator",
     slug: "mortgage",
-    href: "https://mortgagecalculator.simplekit.app/",
+    href: "https://simplekit.app/mortgage-calculator/",
     category: "Home Planning",
     timeToUse: "3 min",
     status: "live",
@@ -100,7 +100,7 @@ const SIMPLEKIT_TOOLS = [
     aliases: ["travel"],
     name: "Travel Planner",
     slug: "travel-planner.html",
-    href: "https://travel.simplekit.app/",
+    href: "https://simplekit.app/travel-planner/",
     category: "Lifestyle Planning",
     timeToUse: "2 min",
     status: "planned",
@@ -253,10 +253,12 @@ function renderFooter(config) {
           <strong>Learn</strong>
           ${showFooterLearnLinks ? `
             <div class="footer-link-list">
-              <a href="https://simplekit.app/learn/">Guides Hub</a>
+              <a href="https://simplekit.app/learn/">Learn Hub</a>
               <a href="https://simplekit.app/learn/retirement-planning-basics/">Retirement Planning Basics</a>
               <a href="https://simplekit.app/learn/cpp-basics/">CPP Basics</a>
+              <a href="https://simplekit.app/learn/fire-explained/">FIRE Explained</a>
               <a href="https://simplekit.app/learn/rrsp-vs-tfsa-basics/">RRSP vs TFSA Basics</a>
+              <a href="https://simplekit.app/learn/net-worth-basics/">Understanding Net Worth</a>
             </div>
           ` : ""}
         </div>
