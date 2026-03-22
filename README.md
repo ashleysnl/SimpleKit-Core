@@ -56,11 +56,14 @@ Consuming pages set `window.SimpleKitPage` before loading `simplekit-core.js`.
     showFloatingSupportButton: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
-    footerNote: "Shared platform shell loaded from SimpleKit core."
+    footerNote: "Shared platform shell loaded from SimpleKit core.",
+    legalDisclaimer: "SimpleKit tools are for informational and educational purposes only."
   };
 </script>
 <script type="module" src="./core.js"></script>
 ```
+
+Core also renders a default footer disclaimer automatically. Use `legalDisclaimer` to override that wording or `showLegalDisclaimer: false` to hide it for a specific page.
 
 Required shell mount points:
 

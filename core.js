@@ -121,6 +121,8 @@ const DEFAULT_NAV = [
   { href: "https://simplekit.app/support/", label: "Support" },
 ];
 
+const DEFAULT_LEGAL_DISCLAIMER = "SimpleKit tools are for informational and educational purposes only. They do not provide financial, investment, tax, legal, or accounting advice, and they are not a substitute for advice from a qualified professional. Calculations are estimates and may not reflect your full situation.";
+
 function normalizeToolId(toolId) {
   const value = String(toolId || "").trim();
   if (!value) return "";
@@ -238,6 +240,8 @@ function renderFooter(config) {
   const showFooterToolLinks = config.showFooterToolLinks !== false;
   const showFooterLearnLinks = config.showFooterLearnLinks !== false;
   const showFooterSupportLinks = config.showFooterSupportLinks !== false;
+  const showLegalDisclaimer = config.showLegalDisclaimer !== false;
+  const legalDisclaimer = config.legalDisclaimer || DEFAULT_LEGAL_DISCLAIMER;
   mount.innerHTML = `
     <footer class="app-footer no-print" aria-label="Footer">
       <div class="footer-grid">
@@ -276,6 +280,7 @@ function renderFooter(config) {
         <span class="muted small-copy">${escapeHtml(config.footerNote || "SimpleKit core shell for static tool pages.")}</span>
         <span class="muted small-copy">© 2026 SimpleKit</span>
       </div>
+      ${showLegalDisclaimer ? `<p class="footer-legal muted small-copy">${escapeHtml(legalDisclaimer)}</p>` : ""}
     </footer>
   `;
 }
@@ -307,8 +312,18 @@ function renderFloatingSupportButton(config) {
   floatingSupport.href = "https://buymeacoffee.com/ashleysnl";
   floatingSupport.target = "_blank";
   floatingSupport.rel = "noopener noreferrer";
-  floatingSupport.setAttribute("aria-label", "Support this free tool");
-  floatingSupport.textContent = "☕ Support this free tool";
+  const applyFloatingSupportLabel = () => {
+    const compact = window.matchMedia("(max-width: 720px)").matches;
+    floatingSupport.setAttribute("aria-label", "Support this free tool");
+    floatingSupport.textContent = compact ? "☕ Support" : "☕ Support this free tool";
+  };
+  applyFloatingSupportLabel();
+  const mediaQuery = window.matchMedia("(max-width: 720px)");
+  if (typeof mediaQuery.addEventListener === "function") {
+    mediaQuery.addEventListener("change", applyFloatingSupportLabel);
+  } else if (typeof mediaQuery.addListener === "function") {
+    mediaQuery.addListener(applyFloatingSupportLabel);
+  }
   document.body.appendChild(floatingSupport);
 }
 

@@ -345,6 +345,13 @@ a:focus-visible {
   border-top: 1px solid var(--line);
 }
 
+.footer-legal {
+  margin: 0;
+  max-width: 72ch;
+  padding-top: 4px;
+  line-height: 1.55;
+}
+
 .floating-support-btn {
   position: fixed;
   right: 20px;
@@ -398,8 +405,11 @@ a:focus-visible {
   .floating-support-btn {
     right: 14px;
     bottom: 14px;
-    min-height: 56px;
-    padding: 12px 20px;
-    font-size: 0.92rem;
+    min-height: 52px;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    gap: 8px;
+    max-width: calc(100vw - 28px);
+    white-space: nowrap;
   }
 }

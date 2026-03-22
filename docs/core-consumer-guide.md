@@ -40,7 +40,8 @@ Set `window.SimpleKitPage` before loading `core.js`.
     showFloatingSupportButton: true,
     showRelatedTools: true,
     showFooterToolLinks: true,
-    footerNote: "SimpleKit shell loaded from the shared core repo."
+    footerNote: "SimpleKit shell loaded from the shared core repo.",
+    legalDisclaimer: "SimpleKit tools are for informational and educational purposes only."
   };
 </script>
 <script type="module" src="./core.js"></script>
@@ -66,6 +67,10 @@ Supported config fields today:
 - `supportPrimaryLabel`
 - `supportSecondaryLabel`
 - `footerNote`
+- `showLegalDisclaimer`
+- `legalDisclaimer`
+
+Core renders a default footer disclaimer automatically. Use `legalDisclaimer` to override the wording or `showLegalDisclaimer: false` if a page needs to hide it.
 
 ## Required Mount Points
 
