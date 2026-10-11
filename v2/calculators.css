@@ -71,3 +71,12 @@
 .sk-v2[data-v2-calculator] input[type=file][aria-hidden=true] { display:none; }
 .sk-v2[data-v2-calculator] label:has(>input[type=checkbox]),
 .sk-v2[data-v2-calculator] label:has(>input[type=radio]) { min-height:44px; }
+
+.sk-v2[data-v2-calculator] .section-kicker,
+.sk-v2[data-v2-calculator] .field-help,
+.sk-v2[data-v2-calculator] .summary-note { opacity:1; }
+.sk-v2[data-v2-calculator] .form-field small { color:var(--v2-slate); opacity:1; }
+
+/* Prevent intrinsic flex bases from crushing mobile hero text. */
+.sk-v2[data-v2-calculator] .v2c-hero { display:grid; grid-template-columns:minmax(0,1fr); }
+@media(min-width:64rem) { .sk-v2[data-v2-calculator] .v2c-hero:has(.hero-aside,.hero-side) { grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); } }
