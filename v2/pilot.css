@@ -19,6 +19,7 @@
 .sk-v2[data-v2-pilot] :where(.chart-label,.muted,.small-copy,.helper,.field-help) { color:var(--v2-slate); }
 .sk-v2[data-v2-pilot] [aria-invalid=true] { border:2px solid var(--v2-error); }
 .sk-v2[data-v2-pilot] .hero a.btn-primary { color:#fff; }
+.sk-v2[data-v2-pilot] #simplekitFloatingSupport { display:none; }
 .sk-v2[data-v2-pilot="guide"] main { max-width:46rem; }
 .sk-v2[data-v2-pilot="guide"] .panel { margin-top:1rem; }
 .sk-v2[data-v2-pilot] :where(.error,.error-message,.validation-error) { color:var(--v2-error); }
