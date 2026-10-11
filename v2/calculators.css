@@ -62,3 +62,12 @@
 @media(prefers-reduced-motion:reduce) { .sk-v2[data-v2-calculator] * { animation:none; transition:none; scroll-behavior:auto; } }
 @media(forced-colors:active) { .sk-v2[data-v2-calculator] :where(.v2c-hero,.v2c-surface,.v2c-card,.v2c-chart,input,select,button) { border-color:CanvasText; box-shadow:none; } }
 @media print { .sk-v2[data-v2-calculator] :where(.v2s-header,.v2s-footer,.no-print,#simplekitFloatingSupport) { display:none; } .sk-v2[data-v2-calculator] .page-shell { width:100%; margin:0; } .sk-v2[data-v2-calculator] :where(.v2c-surface,.v2c-card,.v2c-chart) { box-shadow:none; break-inside:avoid; } }
+
+/* Final QA: preserve readable labels and native hidden upload controls. */
+.sk-v2[data-v2-calculator] .panel-header .section-kicker,
+.sk-v2[data-v2-calculator] .section-kicker { color:var(--v2-blue); }
+.sk-v2[data-v2-calculator] .field-help,
+.sk-v2[data-v2-calculator] .summary-note { color:var(--v2-slate); }
+.sk-v2[data-v2-calculator] input[type=file][aria-hidden=true] { display:none; }
+.sk-v2[data-v2-calculator] label:has(>input[type=checkbox]),
+.sk-v2[data-v2-calculator] label:has(>input[type=radio]) { min-height:44px; }
