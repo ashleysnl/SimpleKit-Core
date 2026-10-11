@@ -1,0 +1,31 @@
+/* Reviewed pilot layer. Only explicitly opted-in calculators receive these rules. */
+.sk-v2[data-v2-pilot] { background:var(--v2-canvas); color:var(--v2-navy); font-family:var(--v2-body); --brand:var(--v2-blue); --brand-2:var(--v2-teal); --text:var(--v2-navy); --muted:var(--v2-slate); --mortgage-ink:var(--v2-navy); --mortgage-muted:var(--v2-slate); --mortgage-brand:var(--v2-blue); }
+.sk-v2[data-v2-pilot] :where(input,select,textarea,button) { font-family:inherit; font-size:1rem; }
+.sk-v2[data-v2-pilot] :where(h1,h2,h3) { font-family:var(--v2-display); color:var(--v2-navy); overflow-wrap:anywhere; }
+.sk-v2[data-v2-pilot] .page-shell { width:min(calc(100% - 2rem),76rem); margin:0 auto 3rem; }
+.sk-v2[data-v2-pilot] .hero { margin:1rem 0; padding:1.25rem; background:var(--v2-tint); color:var(--v2-navy); border:1px solid var(--v2-border); border-radius:var(--v2-radius-card); box-shadow:none; }
+.sk-v2[data-v2-pilot] .hero :where(p,a,li,strong,.hero-subtitle,.hero-proof,.hero-home-link,.hero-benefit) { color:var(--v2-navy); }
+.sk-v2[data-v2-pilot] .hero h1 { font-size:clamp(1.875rem,1.3rem + 2vw,2.75rem); line-height:1.12; max-width:28ch; }
+.sk-v2[data-v2-pilot] :where(.hero-side-card,.hero-highlight,.hero-mini-grid>div,.hero-benefit,.hero-trust-row>span) { background:var(--v2-surface); border-color:var(--v2-border); color:var(--v2-navy); }
+.sk-v2[data-v2-pilot] :where(.panel,.results-shell,.input-card,.chart-card,.hero-side-card,.hero-highlight) { border:1px solid var(--v2-border); border-radius:var(--v2-radius-card); background:var(--v2-surface); box-shadow:var(--v2-shadow-soft); }
+.sk-v2[data-v2-pilot] :where(input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea) { min-height:44px; border:1px solid var(--v2-control-border); border-radius:var(--v2-radius-sm); background:var(--v2-surface); color:var(--v2-navy); max-width:100%; }
+.sk-v2[data-v2-pilot] :where(button,.btn,.tab-btn,summary) { min-height:44px; white-space:normal; }
+.sk-v2[data-v2-pilot] :where(.btn-primary,.btn.primary) { background:var(--v2-blue); color:#fff; border-color:var(--v2-blue); }
+.sk-v2[data-v2-pilot] :where(.btn-secondary,.btn.secondary,.btn-quiet) { background:var(--v2-surface); color:var(--v2-blue); border:1px solid var(--v2-control-border); }
+.sk-v2[data-v2-pilot] .tab-btn.active { color:var(--v2-blue); background:var(--v2-blue-soft); border-color:var(--v2-blue); }
+.sk-v2[data-v2-pilot] :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible { outline:3px solid var(--v2-focus); outline-offset:3px; }
+.sk-v2[data-v2-pilot] :where(.table-scroll,.table-wrap) { max-width:100%; overflow-x:auto; border-radius:var(--v2-radius-sm); }
+.sk-v2[data-v2-pilot] :where(canvas,svg) { max-width:100%; }
+.sk-v2[data-v2-pilot] :where(.chart-label,.muted,.small-copy,.helper,.field-help) { color:var(--v2-slate); }
+.sk-v2[data-v2-pilot] [aria-invalid=true] { border:2px solid var(--v2-error); }
+.sk-v2[data-v2-pilot] :where(.error,.error-message,.validation-error) { color:var(--v2-error); }
+@media(max-width:47.99rem) {
+ .sk-v2[data-v2-pilot] .hero { padding:1rem; }
+ .sk-v2[data-v2-pilot] :where(.hero-grid,.hero-mortgage) { grid-template-columns:minmax(0,1fr); gap:1rem; }
+ .sk-v2[data-v2-pilot] :where(.hero-side-card,.hero-side) { margin:0; }
+ .sk-v2[data-v2-pilot] :where(.panel,.input-card,.results-shell) { padding:1rem; }
+ .sk-v2[data-v2-pilot] :where(.hero-actions,.panel-side-actions) { flex-wrap:wrap; }
+}
+@media(prefers-reduced-motion:reduce) { .sk-v2[data-v2-pilot],.sk-v2[data-v2-pilot] * { scroll-behavior:auto; transition:none; animation:none; } }
+@media(forced-colors:active) { .sk-v2[data-v2-pilot] :where(.hero,.panel,.input-card,.results-shell,.btn,input,select) { border-color:CanvasText; box-shadow:none; } }
+@media print { .sk-v2[data-v2-pilot] :where(.v2s-header,.v2s-footer,.hero-actions,.no-print) { display:none; } .sk-v2[data-v2-pilot] .page-shell { width:100%; } }
