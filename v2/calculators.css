@@ -33,7 +33,7 @@
 .sk-v2[data-v2-calculator] :where(input[type=checkbox],input[type=radio]) { accent-color:var(--v2-blue); min-width:1.125rem; min-height:1.125rem; }
 .sk-v2[data-v2-calculator] :where(.checkbox-field,.checkbox-inline,.toggle-card) { min-height:44px; }
 .sk-v2[data-v2-calculator] :where(label,legend) { color:var(--v2-navy); font-weight:600; }
-.sk-v2[data-v2-calculator] :where(button,.btn,.file-trigger,summary) { min-height:44px; white-space:normal; }
+.sk-v2[data-v2-calculator] :where(button,.btn,.file-trigger,summary) { min-width:44px; min-height:44px; white-space:normal; }
 .sk-v2[data-v2-calculator] :where(.icon-btn,.row-remove-btn,.row-add-btn) { min-width:44px; min-height:44px; }
 .sk-v2[data-v2-calculator] :where(.btn-primary,.add-btn) { color:#fff; background:var(--v2-blue); border:1px solid var(--v2-blue); border-radius:var(--v2-radius-sm); box-shadow:none; }
 .sk-v2[data-v2-calculator] .v2c-hero .btn-primary { color:#fff; }
