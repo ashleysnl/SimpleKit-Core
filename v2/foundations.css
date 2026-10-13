@@ -5,6 +5,10 @@
 @font-face { font-family: "SimpleKit Sans"; src: url("fonts/simplekit-sans-700.woff2") format("woff2"), url("fonts/simplekit-sans-700.woff") format("woff"); font-style: normal; font-weight: 700; font-display: swap; }
 
 .sk-v2 {
+  --v2-wordmark-size: clamp(1.875rem, 1.7rem + .7vw, 2.375rem);
+  --v2-wordmark-mobile: 1.75rem;
+  --v2-shell-muted-size: .8125rem;
+  --v2-action-radius: var(--v2-radius-pill);
   --v2-canvas: #fcfcfb;
   --v2-surface: #ffffff;
   --v2-tint: #eef5ff;

@@ -130,3 +130,7 @@ Do not put these in `simplekit-core`:
 - charts tied to one tool
 - retirement-specific assumptions
 - tool-specific glossary content
+
+## Opted-in V2 shared theme
+
+For V2 consumers, follow [System v1 theme amendment 1.1](v2-shared-theme.md). Common assets and markup are owned in `v2/` and adopted through the site's immutable Core pin; legacy core.css/core.js guidance above remains unchanged. Do not mount both the legacy shell and a V2 shell, edit copied build outputs, or introduce tool formulas/state into shared theme helpers.
