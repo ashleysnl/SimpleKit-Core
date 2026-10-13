@@ -85,3 +85,19 @@
  .sk-v2[data-v2-calculator] .v2c-hero .hero-grid,
  .sk-v2[data-v2-calculator] .v2c-hero .hero-mini-grid { grid-template-columns:minmax(0,1fr); }
 }
+
+/* Theme 1.1 task introductions. Requires the explicitly adopted shared shell.
+   Only presentation: task-specific form/result/chart layouts remain source-owned. */
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero {
+ padding:0; margin:.75rem 0 1.25rem; border:0; border-radius:0;
+ background:transparent; box-shadow:none; gap:1rem;
+}
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero :where(.hero-copy,.hero-content) { gap:.75rem; }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero h1 { margin:0; font-size:clamp(1.75rem,1.4rem + 1.5vw,2.5rem); }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero .hero-subtitle { margin:.75rem 0 0; max-width:65ch; font-size:1rem; line-height:1.5; font-weight:400; }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero :where(.hero-proof,.hero-trust,.hero-trust-inline) { font-size:.8125rem; line-height:1.5; color:var(--v2-slate); }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-hero :where(.hero-stat-card,.hero-highlight,.hero-mini-card) { padding:.75rem; border-radius:var(--v2-radius-sm); }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-context { padding:.25rem .75rem; border:1px solid var(--v2-border); border-radius:var(--v2-radius-sm); background:var(--v2-surface); }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-context[open] { padding-bottom:.75rem; }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-context > summary { font-size:.875rem; }
+.sk-v2[data-v2-calculator]:has(.v2s-header[data-v2-theme="1.1"]) .v2c-context :where(p,li) { font-size:.875rem; }

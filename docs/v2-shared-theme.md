@@ -19,3 +19,10 @@ Change common theme values/components here on Core develop-v2. Publish a reviewe
 This is an additive V1 amendment: prior token meanings, component class contracts and financial behavior are retained. Breaking/removing a token/class, changing required markup/API or incompatible behavior requires a new contract version and explicit consumer migration. An appearance change within the compatible contract still invalidates affected visual evidence and requires release QA.
 
 Rollback: restore the previous Core pin and the associated site adapter/template changes through a normal revert; rebuild the portable artifact. Previous pin is f3bc12213c5b91698ddc64953faa6c4a9ef15e61. No cache editing, force-push, state deletion or production/CDN deployment. Final numerical/state/cross-browser/SEO/accessibility acceptance belongs to Phase 16.
+
+Phase 15C keeps task introductions compact in `v2/calculators.css`, gated by the
+adopted theme 1.1 header. It does not alter legacy/unmarked consumers or impose
+one form layout. `v2c-context` is the shared native disclosure for optional
+introductory prose; financial fields, controls and live result IDs stay outside
+that disclosure. Tool-owned sources decide content order and preserve copy,
+anchors and task-specific assumptions. Adopt through a deliberate Core pin.
