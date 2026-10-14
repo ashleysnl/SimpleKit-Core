@@ -1,0 +1,37 @@
+# Authoring template, not an installed Factory parser/schema migration.
+# Preserve the existing tool's financial spec; these V2 integration fields are
+# explicit planning metadata until its owning generator supports them.
+name: "REPLACE: tool name"
+slug: "REPLACE: canonical slug from simplekit-site/data/tools.json"
+repo_name: "REPLACE: owning calculator repository"
+seo:
+  page_title: "REPLACE: preserved title"
+  meta_description: "REPLACE: preserved description"
+  h1: "REPLACE: concise interior title"
+calculator:
+  description: "REPLACE: one-sentence task introduction"
+  formula_summary: "REPLACE: exact source-owned formula and assumptions"
+inputs: [] # Declare IDs, units, parsing, defaults, ranges, labels/help/errors.
+outputs: [] # Declare IDs, units, rounding, primary/supporting priority and states.
+persistence:
+  keys_and_version: "REPLACE or explicitly none"
+  import_export_contract: "REPLACE or explicitly none; preserve formats"
+v2_integration:
+  system_contract: 1
+  theme_amendment: "1.1"
+  branch: "develop-v2"
+  core_revision: "REPLACE: full adopted SHA from the site source manifest"
+  layout: "REPLACE: simple comparison / guided / dynamic rows / checklist / tabs / report"
+  shared_components: "Core v2/components.mjs; locally assembled immutable assets"
+  support_placement: "normal-flow shared footer"
+  preserved_routes_and_anchors: []
+  related_routes: [] # Reuse the existing canonical registry, not a new catalogue.
+  exceptions: [] # Owner, rationale, preserved behavior, deferred check/closure.
+verification:
+  development: "diff review, one portable build per batch, touched behavior/mobile/desktop"
+  final_checkpoint: "Phase 16: financial/state/export, content/SEO, accessibility, browsers, visuals"
+  implementation_state: "[ ]"
+  final_acceptance_state: "[ ]"
+release:
+  production_authorized: false
+  rollback: "REPLACE: previous source/Core pins and state-compatible revert procedure"

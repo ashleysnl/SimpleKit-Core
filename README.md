@@ -139,3 +139,7 @@ Recommended approach for downstream repos:
 ## Maintenance Rule
 
 Keep all future platform additions inside `src/platform/*`, `simplekit-core.*`, and `dist/*`.
+
+## V2 authoring and maintenance
+
+V2 shared implementation lives in `v2/`; the legacy platform maintenance rule above applies to its original consumers. Read [the maintained V2 authoring contract](docs/v2-authoring/README.md) for the style guide, master Codex prompt, spec and starter. Common V2 changes target `develop-v2` and deliberate immutable consumer pins; do not deploy the development theme to the production CDN. The starter is an authored skeleton, not a calculator or a deployed route.

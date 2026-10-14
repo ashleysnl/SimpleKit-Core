@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{pageTitle}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonicalUrl}}">
+  {{preservedHead}}
+  <link rel="stylesheet" href="/assets/core/v2/foundations.css">
+  <link rel="stylesheet" href="/assets/core/v2/system.css">
+  <link rel="stylesheet" href="/assets/core/v2/calculators.css">
+  {{toolStyles}}
+</head>
+<body class="sk-v2" data-v2-system="1" data-v2-calculator="{{toolId}}" data-v2-family="{{family}}">
+  {{sharedHeader}}
+  <script src="/assets/core/v2/shell.js"></script>
+  <div class="page-shell">
+    <main id="main" class="v2c-main" tabindex="-1">
+      {{breadcrumbs}}
+      <header class="v2c-hero" aria-labelledby="tool-title">
+        <h1 id="tool-title">{{h1}}</h1>
+        <p class="hero-subtitle">{{introduction}}</p>
+      </header>
+      {{workingContent}}
+      {{assumptionsAndRelatedContent}}
+    </main>
+  </div>
+  {{sharedFooter}}
+  {{preservedScripts}}
+</body>
+</html>
