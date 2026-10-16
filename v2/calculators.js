@@ -13,6 +13,14 @@
         if(heading?.id)region.setAttribute('aria-labelledby',heading.id);
         else region.setAttribute('aria-label',region.querySelector('caption')?.textContent.trim()||'Calculator results table');
       }
+      // WebKit does not consistently scroll a focused region with arrow keys.
+      // Handle only the region itself; nested controls keep their native keys.
+      region.addEventListener('keydown',event=>{
+        if(event.target!==region||event.defaultPrevented||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+        if(!['ArrowLeft','ArrowRight'].includes(event.key)||region.scrollWidth<=region.clientWidth+1)return;
+        event.preventDefault();
+        region.scrollLeft+=(event.key==='ArrowRight'?1:-1)*Math.max(40,region.clientWidth/4);
+      });
       prepared.add(region);
     }
   };

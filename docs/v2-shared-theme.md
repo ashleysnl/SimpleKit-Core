@@ -18,6 +18,15 @@ Change common theme values/components here on Core develop-v2. Publish a reviewe
 
 This is an additive V1 amendment: prior token meanings, component class contracts and financial behavior are retained. Breaking/removing a token/class, changing required markup/API or incompatible behavior requires a new contract version and explicit consumer migration. An appearance change within the compatible contract still invalidates affected visual evidence and requires release QA.
 
+`v2/calculators.js` enhances opted-in result-table regions with names/focus and a
+horizontal ArrowLeft/ArrowRight fallback where WebKit does not scroll natively.
+It acts only when the scroll region itself receives the unmodified key and has
+horizontal overflow. Nested inputs/selects/buttons and modified keys retain native
+behavior; no financial inputs, state, persistence or network are read or changed.
+This compatible System v1 enhancement is adopted through a new immutable Core
+pin. Roll it back by restoring the preceding pin through a normal revert/build;
+legacy Core assets and production CDN consumers are unaffected.
+
 Rollback: restore the previous Core pin and the associated site adapter/template changes through a normal revert; rebuild the portable artifact. Previous pin is f3bc12213c5b91698ddc64953faa6c4a9ef15e61. No cache editing, force-push, state deletion or production/CDN deployment. Final numerical/state/cross-browser/SEO/accessibility acceptance belongs to Phase 16.
 
 Phase 15C keeps task introductions compact in `v2/calculators.css`, gated by the
